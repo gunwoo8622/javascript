@@ -28,19 +28,20 @@ class UserStorage {
       }, 1000);
     });
   }
+
+  // Hoemwork Answer!
+  async getUserWithRole(user, password) {
+    const userPro = await this.loginUser(user, password);
+    const role = await this.getRoles(user);
+    return role;
+  }
 }
 
 const userStorage = new UserStorage();
 const id = prompt('enter your id');
 const password = prompt('enter your password');
 
-userStorage
-  .loginUser(id, password)
-  .then(userStorage.getRoles)
-  .then((user) => alert(`Hi ${user.name}, you have a ${user.role} role`))
-  .catch(console.log);
-
-// 위처럼 간단해짐
+// 아래처럼 간단해짐
 // userStorage.loginUser(
 //   id,
 //   password,
@@ -59,3 +60,15 @@ userStorage
 //     console.log(error);
 //   }
 // );
+
+// Original code from Youtube course
+// userStorage
+//   .loginUser(id, password)
+//   .then(userStorage.getRoles)
+//   .then((user) => alert(`Hi ${user.name}, you have a ${user.role} role`))
+//   .catch(console.log);
+
+userStorage //
+  .getUserWithRole(id, password)
+  .catch(console.log)
+  .then(console.log);
