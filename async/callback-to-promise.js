@@ -71,4 +71,4 @@ const password = prompt('enter your password');
 userStorage //
   .getUserWithRole(id, password)
   .catch(console.log)
-  .then(console.log);
+  .then((user) => alert(`Hi ${user.name}, you have a ${user.role} role`));

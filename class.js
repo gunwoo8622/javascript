@@ -10,6 +10,7 @@
 // 1. Class declarations
 class Person {
   // constructor(생성자)
+  // (this)name, age변수가 있고 이 class를 이용해 object를 만드는 순간 name, age로 초기화 된다.
   constructor(name, age) {
     // fields
     this.name = name;
@@ -17,6 +18,7 @@ class Person {
   }
 
   // methods
+  // class에서 함수를 선언할 때 앞에 function 안 붙여도된다.
   speak() {
     console.log(`${this.name}: hello!`);
   }

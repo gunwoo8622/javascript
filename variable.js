@@ -44,6 +44,8 @@ const maxNumber = 5;
 //  - number, string, boolean, null, undefined, symbol
 //  - 메모리에 바로 저장됨
 // object, box container (single item을 묶어서 한 단위, 박스로 관리)
+//  - primitive 제외한 나머지는 모두 object
+//  - 데이터가 아니라 데이터가 저장된 주소(ref)가 복사된다.
 //  - 너무 커서 reference가 메모리에 저장됨 그래서 value값 변경 가능
 // function, first-clas function
 //  -first-clas function이란?
